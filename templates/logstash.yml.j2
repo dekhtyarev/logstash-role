@@ -47,7 +47,7 @@ pipeline.batch.size: {{ logstash_config.batch_size }}
 # How long to wait before dispatching an undersized batch to filters+workers
 # Value is in milliseconds.
 #
-pipeline.batch.delay: {{ logstash_config.batch_size }}
+pipeline.batch.delay: {{ logstash_config.batch_delay }}
 #
 # Force Logstash to exit during shutdown even if there are still inflight
 # events in memory. By default, logstash will refuse to quit until all
