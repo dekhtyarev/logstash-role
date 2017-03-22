@@ -59,9 +59,12 @@ script:
   - ansible-playbook --syntax-check -i inventory test.yml
   - ansible-playbook -i inventory --connection=local test.yml --sudo -vvvv
                      -e logstash_version=$LOGSTASH_VERSION
+  - dpkg -l | grep logstash
   - ansible-playbook -i inventory --connection=local test.yml --sudo -vvvv
                      -e logstash_version=$LOGSTASH_VERSION
+  - dpkg -l | grep logstash
   - if [[ "$NEXT_LOGSTASH_VERSION" != '' ]]; then
         ansible-playbook -i inventory --connection=local test.yml --sudo -vvvv
                          -e logstash_version=$NEXT_LOGSTASH_VERSION;
     fi
+  - dpkg -l | grep logstash
