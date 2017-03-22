@@ -38,16 +38,16 @@ pipeline.workers: {{ logstash_config.pipeline_workers }}
 #
 # How many workers should be used per output plugin instance
 #
-pipeline.output.workers: {{ logstash_config.output_workers }}
+pipeline.output.workers: {{ logstash_config.pipline_output_workers }}
 #
 # How many events to retrieve from inputs before sending to filters+workers
 #
-pipeline.batch.size: {{ logstash_config.batch_size }}
+pipeline.batch.size: {{ logstash_config.pipeline_batch_size }}
 #
 # How long to wait before dispatching an undersized batch to filters+workers
 # Value is in milliseconds.
 #
-pipeline.batch.delay: {{ logstash_config.batch_delay }}
+pipeline.batch.delay: {{ logstash_config.pipeline_batch_delay }}
 #
 # Force Logstash to exit during shutdown even if there are still inflight
 # events in memory. By default, logstash will refuse to quit until all
