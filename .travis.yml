@@ -48,7 +48,7 @@ before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq python-apt python-pycurl
  - if [[ "$_system_version" == "12.04" ]]; then
-        if [[ "$LOGSTASH_VERSION" == "5.0" ]] || [[ "$NEXT_LOGSTASH_VERSION" == "5.0" ]]; then
+        if [[ "$LOGSTASH_VERSION" =~ "5.*" ]] || [[ "$NEXT_LOGSTASH_VERSION" =~ "5.*" ]]; then
             sudo apt-get install -y oracle-java8-installer;
             export JAVA_HOME=/usr/lib/jvm/java-8-oracle;
         else
