@@ -32,7 +32,6 @@
     LS_JAVA_OPTS: "{{ logstash_java_opts }}"
   apt:
     pkg: "logstash=1:{{ logstash_version }}.*"
-    state: latest
     allow_unauthenticated: yes
   register: install_logstash
   notify:
