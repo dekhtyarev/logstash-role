@@ -71,3 +71,6 @@ logstash_startup_options_service_name: "logstash"
 logstash_startup_options_service_description: "logstash"
 logstash_startup_options_prestart: ""
 
+# Options for log4j2
+logstash_log4j2_max_files: 10
+logstash_log4j2_filesize: "512 MB"
