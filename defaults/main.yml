@@ -31,7 +31,7 @@ logstash_custom_vars:
         home_dir: "/usr/share/logstash",
         plugin_bin: "logstash-plugin",
         config_validate_params: "--path.settings {{ logstash_settings_dir }} -tf %s",
-        logstash_dead_letter_queue_enable: true
+        logstash_dead_letter_queue_enable: false
       }
     - {
         version: ["1.5", "2.0", "2.1", "2.2", "2.3", "2.4"],
